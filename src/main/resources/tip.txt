@@ -15,3 +15,7 @@ http://localhost:8080(앞의 주소 상관없음)    /login/oauth2/code (뒤에�
 user-name-attribute는 최종 사용자의 이름 또는 식별자를 참조하는 UserInfo 응답에서 반환된 속성의 이름입니다.
 회원 정보를 json 으로 받는데 response라는 키값으로 네이버가 리턴해준다 //  OAuth2User.getAttributes 연관있음 // 네이버는 reponse안에 정보가 있다
 spring.security.oauth2.client.provider.naver.user-name-attribute=response
+
+
+
+// tcp

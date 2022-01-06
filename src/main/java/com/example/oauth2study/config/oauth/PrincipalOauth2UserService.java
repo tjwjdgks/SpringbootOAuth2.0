@@ -12,6 +12,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;
 import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
+import org.springframework.security.oauth2.core.user.DefaultOAuth2User;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -54,7 +55,6 @@ public class PrincipalOauth2UserService  extends DefaultOAuth2UserService {
                throw new RuntimeException("oauth2 provider 문제 발생");
        }
        System.out.println(oAuth2User);
-
        Account account = createAccount(oAuth2UserInfo);
        return new PrincipalDetails(account);
 
